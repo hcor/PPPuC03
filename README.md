@@ -18,37 +18,38 @@
 
 * 题1-向量积 - `src/vector`
 
-* 题2-Nth - src/nth
+* 题2-Nth - `src/nth`
 
-* 题3-递归回文判定 - src/palindrome
+* 题3-递归回文判定 - `src/palindrome`
 
 ## 第三次作业 - 0425 ##
 
 # 关于git #
 
-github.com中的代码可以直接Web浏览与下载；感兴趣的童鞋可以学一下git，这坨代码是
-用git管的，比如在Ubuntu下：
+`github.com`中的代码可以直接WEB浏览与下载。
+
+建议感兴趣的童鞋学一下git，这坨代码就是用git管的，比如在Ubuntu下：
 
 ```
     sudo apt-get install git
     git clone https://github.com/qzan/pppuc03.git
 ```
 
-克隆完后就可以去`pppuc03`目录中看代码了。
+下载完后就可以去`pppuc03`目录中读代码了。
 
-今后有了代码更新，可以在`pppuc03`下直接敲命令：
+这样今后有了更新，可以在`pppuc03`下直接敲命令：
 
 ```
     git pull origin master
 ```
 
-来“拉”代码。当然也欢迎大家向我`push`代码，作业虽然简单，但写得精致点并分享出来，
-对学习还是很有帮助的。
+来“拉”新代码。
+
+当然也欢迎大家向我`push`代码，作业虽然简单，但写得精致点并分享出来，对学习还是很有帮助的。
 
 # 关于make #
 
-代码库中包含了`Makefile`，在`pppuc03`下键入`make`即可编译，编译得到的可执行文件
-保存到了`bin`目录下。
+代码库中包含了`Makefile`，在`pppuc03`下键入`make`即可编译，编译得到的可执行文件默认保存到了`bin`目录下。
 
 感兴趣的童鞋也可以学一下`make`。
 
