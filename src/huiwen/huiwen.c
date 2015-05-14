@@ -54,7 +54,7 @@ void reverse(const char s[], char r[])
 	r[j] = '\0';
 }
 
-int main()
+int main(void)
 {
 	char s[MAX], sqz[MAX], r[MAX];
 	char c;

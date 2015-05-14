@@ -1,5 +1,5 @@
 /*
- * 此题主要考察函数的使用。
+ * 此题主要考察简单数学运算的实现以及函数的使用。
  * */
 
 #include <stdio.h>
@@ -15,6 +15,7 @@ int main()
 	printf("B = "); getVector(&b);
 	printf("C = "); getVector(&c);
 
+	printf("\nDoing the calculation ...");
 	printf("\na . b = %f", dotProduct(a,b));
 	printf("\na x b = "); printVector(crossProduct(a,b));
 	printf("\na . (b x c) = %f", scalarTripleProduct(a,b,c));

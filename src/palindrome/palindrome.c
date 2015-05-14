@@ -6,21 +6,19 @@
 
 #define MAX    1024
 
-int main()
+int main(void)
 {
 	char s[MAX];
 	int len;
 
+	// guys, remember to clean your memory before use.
 	memset(s, 0, MAX*sizeof(char));
 
 	printf("Enter your string (less than %d charactors): ", MAX);
-	while (scanf("%s", s) != EOF)
-	{
+	if (scanf("%s", s) != EOF) {
 		len = strlen(s);
 		printf("%s!\n", palindrome(s, 0, len) ? "Y" : "N");
-		printf("Enter your string (less than %d charactors): ", MAX);
 	}
-	printf("\n");
 
 	return 0;
 }

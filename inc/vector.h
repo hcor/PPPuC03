@@ -29,10 +29,9 @@ Vector vectorTripleProduct(Vector a, Vector b, Vector c)
 	return crossProduct(a,crossProduct(b,c));
 }
 
-void getVector(Vector* a)
+int getVector(Vector* a)
 {
-	if (scanf("%f,%f,%f", &(a->x), &(a->y), &(a->z)) == EOF)
-		fprintf(stderr, "INPUT FAILURE!\n");
+	return scanf("%f,%f,%f", &(a->x), &(a->y), &(a->z));
 }
 
 void printVector(Vector a)

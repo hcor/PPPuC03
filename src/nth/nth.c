@@ -11,16 +11,14 @@ int main(void)
 	int x;
 	char s[MAX];
 
+	// guys, remember to clean your memory before use.
 	memset(s, 0, MAX*sizeof(char));
 
 	printf("Enter your number: ");
-	while (scanf("%d", &x) != EOF)
-	{
+	if (scanf("%d", &x) != EOF) {
 		addSuffix(x, s, MAX);
 		printf("%s\n", s);
-		printf("Enter your number: ");
 	}
-	printf("\n");
 
 	return 0;
 }
