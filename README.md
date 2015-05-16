@@ -42,7 +42,7 @@
 
 * 题1-strstr - `src/strstr`
 
-* 题2-head - *待更新…*
+* 题2-head - `src/head` (ZHU Tianyao's)
 
 * 题3-“1”的个数 - `src/numof1` (KONG Jing's)
 
