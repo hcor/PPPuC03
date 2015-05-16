@@ -52,8 +52,7 @@ void longmul(const char *a, const char *b, char *c)
  
 	/* zero will be zero. */
 	if (!strcmp(a,  "0") || !strcmp(b,  "0") || 
-	    !strcmp(a, "-0") || !strcmp(b, "-0"))
-	{
+	    !strcmp(a, "-0") || !strcmp(b, "-0")) {
 		c[0] = '0', c[1] = '\0';
 		return;
 	}
@@ -61,8 +60,7 @@ void longmul(const char *a, const char *b, char *c)
 	/* see if either a or b is negative */
 	if (a[0] == '-') { i = 1; k = !k; }
 	if (b[0] == '-') { j = 1; k = !k; }
-	if (i || j)
-	{
+	if (i || j) {
 		if (k) c[0] = '-';
 		a += i; b += j; c += k;
 	}
@@ -75,10 +73,8 @@ void longmul(const char *a, const char *b, char *c)
 
 	/* do the multiplication as if by hand. */	
 #	define I(a) (a - '0')
-	for (i = la - 1; i >= 0; i--)
-	{
-		for (j = lb - 1, k = i + j + 1, carry = 0; j >= 0; j--, k--)
-		{
+	for (i = la - 1; i >= 0; i--) {
+		for (j = lb - 1, k = i + j + 1, carry = 0; j >= 0; j--, k--) {
 			n = I(a[i]) * I(b[j]) + I(c[k]) + carry;
 			carry = n / 10;
 			c[k] = (n % 10) + '0';
@@ -95,8 +91,7 @@ int main(int argc, char *argv[])
 {
 	char c[1024];
 
-	if (argc != 3) 
-	{
+	if (argc != 3)  {
 		fprintf(stderr, "Usage: %s [NUM-A] [NUM-B]\n", argv[0]);
 		exit(1);
 	}

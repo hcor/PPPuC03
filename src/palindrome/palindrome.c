@@ -11,7 +11,7 @@ int palindrome(const char* s, int begin, int end)
 	return palindrome(s, begin+1, end-1);
 }
 
-int main(void)
+int main()
 {
 	char s[MAX];
 	int len;

@@ -9,8 +9,7 @@ void addSuffix(int num, char* buf, size_t len)
 	char *suffixes[4] = { "th", "st", "nd", "rd" };
 	int i;
 
-	switch (num % 10)
-	{
+	switch (num % 10) {
 		case 1 : i = (num % 100 == 11) ? 0 : 1;
 		         break;
 		case 2 : i = (num % 100 == 12) ? 0 : 2;
@@ -18,12 +17,12 @@ void addSuffix(int num, char* buf, size_t len)
 		case 3 : i = (num % 100 == 13) ? 0 : 3;
 		         break;
 		default: i = 0;
-	};
+	}
 
 	snprintf(buf, len, "%d%s", num, suffixes[i]);
 }
 
-int main(void)
+int main()
 {
 	int x;
 	char s[MAX];

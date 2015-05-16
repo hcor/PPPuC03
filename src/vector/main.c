@@ -1,11 +1,7 @@
-/*
- * 此题主要考察简单数学运算的实现以及函数的使用。
- * */
-
 #include <stdio.h>
 #include "vector.h"    // ../../inc/vector.h
 
-int main(void)
+int main()
 {
 	// Vector a = {3, 4, 5}, b = {4, 3, 5}, c = {-5, -12, -13};    // i know i'm lazy ...
 	Vector a, b, c;

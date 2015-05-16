@@ -1,5 +1,5 @@
 /*
- * Based on Kong Jing's code.
+ * Based on KONG Jing's code.
  * */
 
 #include <stdio.h>
@@ -14,7 +14,7 @@ int max(const int a, const int b)
 	return (a > b ? a : b);
 }
 
-int main(void)
+int main()
 {
 	int a, b, c, d;
 

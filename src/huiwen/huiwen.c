@@ -1,5 +1,5 @@
 /*
- * Based on Chen Yubi's code.
+ * Based on CHEN Yubi's code.
  *
  * */
 
@@ -22,11 +22,9 @@ void squeeze(const char s[], char sqz[])
 {
 	int i, j;
 
-	for (i = j = 0; s[i] != '\0'; i++)
-	{
+	for (i = j = 0; s[i] != '\0'; i++) {
 		if ( (s[i] >= 'A' && s[i] <= 'Z') || 
-		     (s[i] >= 'a' && s[i] <= 'z') )
-		{
+		     (s[i] >= 'a' && s[i] <= 'z') ) {
 			sqz[j] = (s[i] >= 'A' && s[i] <= 'Z') ? s[i] + 32 : s[i];
 			j++;
 		}
@@ -54,7 +52,7 @@ void reverse(const char s[], char r[])
 	r[j] = '\0';
 }
 
-int main(void)
+int main()
 {
 	char s[MAX], sqz[MAX], r[MAX];
 	char c;
@@ -69,14 +67,11 @@ int main(void)
 	printf("Squeezed: %s, length: %d.\n", sqz, strlen(sqz));
 
 
-	if (huiwen(sqz))
-	{
+	if (huiwen(sqz)) {
 		printf("No!\n");
 		reverse(s, r);
 		printf("Reversed: %s, length: %d.\n", r, strlen(r));
-	}
-	else
-	{
+	} else {
 		printf("Yes!\n");
 	}
 

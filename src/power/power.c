@@ -15,21 +15,17 @@ int power(const int base, const int exp)
 
 	if (exp == 0) return 1;
 
-	if (exp % 2 == 0)
-	{
+	if (exp % 2 == 0) {
 		pwr = power(base, exp/2);
 		return pwr * pwr;
-	}
-	else
-	{
+	} else {
 		return base * power(base, exp-1);
 	}
 }
 
 int main(int argc, char *argv[])
 {
-	if (argc != 3) 
-	{
+	if (argc != 3) {
 		fprintf(stderr, "Usage: %s [BASE] [EXP]\n", argv[0]);
 		exit(1);
 	}
