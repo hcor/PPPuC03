@@ -19,7 +19,7 @@ OUTPUTDIR      = $(BIN)/$(CONFIGURATION)
 # Project files 
 CFILES        := $(PROJECTDIR)/$(PROJECT).c
 CCFILES       := 
-DEPFILES      := $(INC)/power.h
+DEPFILES      := 
 
 OBJFILES      := $(patsubst %.c,$(OBJDIR)/%.o,$(notdir $(CFILES))) \
                  $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(CCFILES)))

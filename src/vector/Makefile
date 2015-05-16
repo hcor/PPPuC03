@@ -17,7 +17,7 @@ OBJDIR        := $(PROJECTDIR)/obj
 OUTPUTDIR      = $(BIN)/$(CONFIGURATION)
 
 # Project files 
-CFILES        := $(PROJECTDIR)/$(PROJECT).c
+CFILES        := $(PROJECTDIR)/main.c $(PROJECTDIR)/vector.c
 CCFILES       := 
 DEPFILES      := $(INC)/vector.h
 

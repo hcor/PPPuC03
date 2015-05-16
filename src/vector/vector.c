@@ -1,27 +1,34 @@
-/*
- * 此题主要考察简单数学运算的实现以及函数的使用。
- * */
-
 #include <stdio.h>
-#include "vector.h"    // ../../inc/vector.h
+#include "vector.h"
 
-int main()
+float dotProduct(Vector a, Vector b)
 {
-	// Vector a = {3, 4, 5}, b = {4, 3, 5}, c = {-5, -12, -13};    // i know i'm lazy ...
-	Vector a, b, c;
+	return (a.x*b.x + a.y*b.y + a.z*b.z);
+}
 
-	printf("Please enter your vectors (\"x,y,z\") ...\n");
-	printf("A = "); getVector(&a);
-	printf("B = "); getVector(&b);
-	printf("C = "); getVector(&c);
+Vector crossProduct(Vector a, Vector b)
+{
+	Vector c = {a.y*b.z-a.z*b.y, a.z*b.x-a.x*b.z, a.x*b.y-a.y*b.x};
+	return c;
+}
 
-	printf("\nDoing the calculation ...");
-	printf("\na . b = %f", dotProduct(a,b));
-	printf("\na x b = "); printVector(crossProduct(a,b));
-	printf("\na . (b x c) = %f", scalarTripleProduct(a,b,c));
-	printf("\na x (b x c) = "); printVector(vectorTripleProduct(a,b,c));
-	printf("\n");
+float scalarTripleProduct(Vector a, Vector b, Vector c)
+{
+	return dotProduct(a,crossProduct(b,c));
+}
+ 
+Vector vectorTripleProduct(Vector a, Vector b, Vector c)
+{
+	return crossProduct(a,crossProduct(b,c));
+}
 
-	return 0;
+int getVector(Vector* a)
+{
+	return scanf("%f,%f,%f", &(a->x), &(a->y), &(a->z));
+}
+
+void printVector(Vector a)
+{
+	printf("[%f, %f, %f]", a.x, a.y, a.z);
 }
 
