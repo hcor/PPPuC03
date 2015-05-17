@@ -7,20 +7,26 @@
 
 #define MAX    1024
 
-const char *strstr(const char *haystack, const char *needle)
+char* strstr(const char *haystack, const char *needle)
 {
+	const char* hstk;
+	const char* ndl;
+
+	if (!*needle) return (char*) haystack;
+
 	while (*haystack != 0) {
 		if (*haystack == *needle) {
-			const char* hstk = haystack + 1;
-			const char* ndl  = needle   + 1;
-			while (*ndl != 0)
+			hstk = haystack + 1;
+			ndl  = needle   + 1;
+			while (*hstk != 0 && *ndl != 0)
 				if (*hstk == *ndl) hstk++, ndl++;
 				else break;
-			if (*ndl == 0)
-				return haystack;
+			if (!*ndl) return (char*) haystack;
+			else if (!*hstk) return NULL;
 		}
 		haystack++;
 	}
+
 	return NULL;
 }
 

@@ -52,7 +52,9 @@
 
 `github.com`中的代码可以直接WEB浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan/PPPuC03/archive/master.zip)。
 
-建议感兴趣的童鞋学一下git，这坨代码就是用git管的，比如在Ubuntu下：
+建议感兴趣的童鞋学一下git，git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。
+
+这坨代码就是用git管的，比如在Ubuntu下：
 
 ```
     sudo apt-get install git
@@ -75,5 +77,5 @@
 
 代码库中包含了`Makefile`，在`pppuc03`下键入`make`即可编译，编译得到的可执行文件默认保存到了`bin`目录下。
 
-感兴趣的童鞋也可以学一下`make`。
+感兴趣的童鞋也可以学一下make，make是一个build管理工具；M$ VS的解决方案、工程项目等的部分，可以看作是make的图形化。
 
