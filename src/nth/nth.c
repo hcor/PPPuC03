@@ -28,11 +28,11 @@ int main()
 	char s[MAX];
 
 	// guys, remember to clean your memory before use.
-	memset(s, 0, MAX*sizeof(char));
+	memset(s, 0, sizeof(s));
 
 	printf("Enter your number: ");
 	if (scanf("%d", &x) != EOF) {
-		addSuffix(x, s, MAX);
+		addSuffix(x, s, sizeof(s));
 		printf("%s\n", s);
 	}
 
