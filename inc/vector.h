@@ -1,8 +1,6 @@
 #ifndef _VECTOR_H_
 #define _VECTOR_H_ 1
 
-#include <stdio.h>
-
 typedef struct {
 	float x, y, z;
 } Vector;
