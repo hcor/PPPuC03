@@ -24,17 +24,17 @@ void addSuffix(int num, char* buf, size_t len)
 
 int main()
 {
-	int x;
-	char s[MAX];
+	int num;
+	char buf[MAX];
 
 	// guys, remember to clean your memory before use.
-	memset(s, 0, sizeof(s));
+	memset(buf, 0, sizeof(buf));
 
 	printf("Enter your number: ");
-	//if (scanf("%d", &x) != EOF) {
-	if (scanf("%d", &x) == 1) {    // better check number of conversions than EOF.
-		addSuffix(x, s, sizeof(s));
-		printf("%s\n", s);
+	//if (scanf("%d", &num) != EOF) {
+	if (scanf("%d", &num) == 1) {    // better check number of conversions than EOF.
+		addSuffix(num, buf, sizeof(buf));
+		printf("%s\n", buf);
 	}
 
 	return 0;
