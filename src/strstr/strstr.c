@@ -35,11 +35,15 @@ int main()
 	char a[MAX], b[MAX];
 	char* result;
 
-	void call_strstr() { result = strstr(a, b); }            // i know this is wired ... and that use of EOF may be wrong ...
-	scanf("%s%s", a, b) == EOF ? exit(1) : call_strstr();    // i just want to shut that annoying warn_unused_result warning ...
-	                                                         // i know i'm stupid ... :)
-	if (result) printf("%ld\n", result-a+1);
-	else printf("NOT FOUND!\n");
+	//void call_strstr() { result = strstr(a, b); }
+	//scanf("%s%s", a, b) == EOF ? exit(1) : call_strstr();
+
+	if (scanf("%s%s", a, b) == 2) {    // better check conversions than EOF.
+		result = strstr(a, b);
+		if (result) printf("%ld\n", result-a+1);
+		else printf("NOT FOUND!\n");
+	}
+
 	return 0;
 }
 

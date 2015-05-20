@@ -31,7 +31,8 @@ int main()
 	memset(s, 0, sizeof(s));
 
 	printf("Enter your number: ");
-	if (scanf("%d", &x) != EOF) {
+	//if (scanf("%d", &x) != EOF) {
+	if (scanf("%d", &x) == 1) {    // better check number of conversions than EOF.
 		addSuffix(x, s, sizeof(s));
 		printf("%s\n", s);
 	}

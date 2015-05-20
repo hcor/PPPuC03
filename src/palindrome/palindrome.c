@@ -20,7 +20,8 @@ int main()
 	memset(s, 0, sizeof(s));
 
 	printf("Enter your string (less than %d charactors): ", MAX);
-	if (scanf("%s", s) != EOF) {
+	//if (scanf("%s", s) != EOF) {
+	if (scanf("%s", s) != EOF) {    // better check conversions than EOF.
 		len = strlen(s);
 		printf("%s!\n", palindrome(s, 0, len) ? "Y" : "N");
 	}
