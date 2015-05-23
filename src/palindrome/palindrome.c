@@ -4,7 +4,7 @@
 
 #define MAX    1024
 
-int palindrome(const char* s, int begin, int end)
+int palindrome(const char *s, int begin, int end)
 {
 	if ((end-1) <= begin) return 1;
 	if (s[begin] != s[end-1]) return 0;

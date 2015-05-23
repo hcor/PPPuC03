@@ -17,12 +17,13 @@ int strlen(const char s[])
 
 void squeeze(const char s[], char sqz[])
 {
-	int i, j;
-	for (i = j = 0; s[i] != '\0'; i++) {
+	int i = 0, j = 0;
+	while (s[i] != 0) {
 		if ( (s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z') ) {
 			sqz[j] = (s[i] >= 'A' && s[i] <= 'Z') ? s[i] + 32 : s[i];
 			j++;
 		}
+		i++;
 	}
 	sqz[j] = '\0';
 }
@@ -49,7 +50,7 @@ int main()
 	char s[MAX], sqz[MAX], r[MAX];
 	int i = 0;
 
-	while ((s[i]=getchar()) != '\n' && i < MAX)
+	while ((s[i] = getchar()) != '\n' && i < MAX)
 		i++;
 	s[i] = '\0';
 	printf("String: %s, length: %d.\n", s, strlen(s));

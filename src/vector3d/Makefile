@@ -3,7 +3,7 @@
 ##################
 
 # Project name and global directory layout
-PROJECT       := vector
+PROJECT       := vector3d
 PROJECTDIR    := .
 
 ROOT          := $(PROJECTDIR)/../..
@@ -17,9 +17,9 @@ OBJDIR        := $(PROJECTDIR)/obj
 OUTPUTDIR      = $(BIN)/$(CONFIGURATION)
 
 # Project files 
-CFILES        := $(PROJECTDIR)/main.c $(PROJECTDIR)/vector.c
+CFILES        := $(PROJECTDIR)/main.c $(PROJECTDIR)/vector3d.c
 CCFILES       := 
-DEPFILES      := $(INC)/vector.h
+DEPFILES      := $(INC)/vector3d.h
 
 OBJFILES      := $(patsubst %.c,$(OBJDIR)/%.o,$(notdir $(CFILES))) \
                  $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(CCFILES)))

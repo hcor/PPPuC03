@@ -4,7 +4,7 @@
 
 #define MAX    1024
 
-void addSuffix(int num, char* buf, size_t len)
+void addSuffix(int num, char *buf, size_t len)
 {
 	char *suffixes[4] = { "th", "st", "nd", "rd" };
 	int i;

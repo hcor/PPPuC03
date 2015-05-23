@@ -8,30 +8,26 @@
 
 #define MAX    1024
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i = 0, n = -1;
 	char c[MAX];
-	char* ep;
-	char* prog = argv[0];
+	char *ep;
+	char *prog = *argv;
 
-	// check the argument count.
-	if (argc != 3) {
+	if (argc != 3) {    // check the argument count.
 		fprintf(stderr, "Usage: %s [-n lines | -c bytes]\n", prog);
 		exit(1);
 	}
 
-	// did you enter a proper count?
-	n = strtol(argv[2], &ep, 10);
+	n = strtol(argv[2], &ep, 10);    // did you enter a proper number?
 	if (*ep || n <= 0) {
-		//fprintf(stderr, "%s: illegal number %s!\n", argv[0], argv[2]);
-		fprintf(stderr, "Usage: %s [-n lines | -c bytes]\n", prog);
+		fprintf(stderr, "Illegal count!\n");
 		exit(2);
 	}
 
-	// print lines or charactors.
-	if (argv[1][0] == '-') {
-		switch (argv[1][1]) {
+	if (*argv[1] == '-') {    // print by lines or charactors.
+		switch (*(argv[1]+1)) {
 		case 'c':
 			while (!feof(stdin) && i < n) {
 				c[0] = fgetc(stdin);
@@ -47,13 +43,11 @@ int main(int argc, char **argv)
 			}
 			break;
 		default:
-			//fprintf(stderr, "%s: illegal option %c!\n", argv[0], argv[1][1]);
-			fprintf(stderr, "Usage: %s [-n lines | -c bytes]\n", prog);
+			fprintf(stderr, "Unknown options!\n");
 			exit(4);
 		}
 	} else {
-		//fprintf(stderr, "%s: illegal option %s!\n", argv[0], argv[1]);
-		fprintf(stderr, "Usage: %s [-n lines | -c bytes]\n", prog);
+		fprintf(stderr, "Illegal options!\n");
 		exit(5);
 	}
 

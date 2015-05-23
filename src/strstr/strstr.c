@@ -7,12 +7,12 @@
 
 #define MAX    1024
 
-char* strstr(const char *haystack, const char *needle)
+char *strstr(const char *haystack, const char *needle)
 {
-	const char* hstk;
-	const char* ndl;
+	const char *hstk;
+	const char *ndl;
 
-	if (*needle == 0) return (char*) haystack;
+	if (!*needle) return (char *) haystack;
 
 	while (*haystack) {
 		if (*haystack == *needle) {
@@ -21,8 +21,8 @@ char* strstr(const char *haystack, const char *needle)
 			while (*hstk && *ndl)
 				if (*hstk == *ndl) hstk++, ndl++;
 				else break;
-			if (*ndl == 0) return (char*) haystack;
-			if (*hstk == 0) return NULL;
+			if (!*ndl) return (char *) haystack;
+			if (!*hstk) return NULL;
 		}
 		haystack++;
 	}
