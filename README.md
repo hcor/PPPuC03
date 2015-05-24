@@ -50,13 +50,13 @@
 
 ## 第五次作业 - 0516 ##
 
-* 题1-两点距离 - *待更新*
+* 题1-两点距离 - `src/dist`
 
-* 题2-完全数 - *待更新*
+* 题2-完全数 - `src/perfnum` (LAN Qingfeng's)
 
-* 题3-添加参数 - *待更新*
+* 题3-添加参数 - `Unit11_studentscore.c` in our QQ group
 
-* 题4-最长回文子串 - *待更新*
+* 题4-最长回文子串 - `src/subpal` (check [LeetCode](http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-i.html))
 
 # 关于git #
 
