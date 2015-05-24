@@ -50,7 +50,7 @@ int main()
 	table = malloc(len*sizeof(bool *) + len*len*sizeof(bool));    // dynamically allocate the table array.
 	*table = (bool *)(table + len);
 	for (i = 1; i < len; i++)
-		*(table+i) = *table + i * len;
+		*(table+i) = *table + i*len;
 	memset(*table, 0, len*len*sizeof(bool));
 
 	maxLen = 1;
