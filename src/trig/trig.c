@@ -83,11 +83,11 @@ long double logs(long double x, long n)
 		sum += powerfact2(x, i) * j;
 	}
 	return sum;
-}
+}*/
 
 int main()
 {
-	long double x;
+	/*long double x;
 	if (scanf("%LF", &x) == 1) {
 		printf("exp = %.6LF\n", exps(x, 4096));
 		if (0 < x && x <= 2) printf("log = %.6LF\n", logs(x-1, 4096));
@@ -95,7 +95,7 @@ int main()
 		while (x < 0)       x += 2 * PI;
 		printf("sin = %.6LF\n", sine  (x, 2048));
 		printf("cos = %.6LF\n", cosine(x, 2048));
-	}
+	}*/
 	return 0;
-}*/
+}
 
