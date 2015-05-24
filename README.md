@@ -8,7 +8,7 @@
 
 * 题1-sin与cos - *待更新…*
 
-* 题2-算税 - *待更新…*
+* 题2-算税 - `src/tax`
 
 * 题3-回文判定 - `src/huiwen` (CHEN Yubi's)
 
@@ -60,11 +60,7 @@
 
 # 关于git #
 
-`github.com`中的代码可以直接WEB浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan/PPPuC03/archive/master.zip)。
-
-建议感兴趣的童鞋学一下git，git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。
-
-这坨代码就是用git管的，比如在Ubuntu下：
+虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git，git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
 
 ```
     sudo apt-get install git
