@@ -9,17 +9,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int power(const int base, const int exp)
+int power(int base, int exp)
 {
 	int pwr;
 
 	if (exp == 0) return 1;
 
+	pwr = power(base, exp/2);    // FU Xin asked for this change.
 	if (exp % 2 == 0) {
-		pwr = power(base, exp/2);
+		//pwr = power(base, exp/2);
 		return pwr * pwr;
 	} else {
-		return base * power(base, exp-1);
+		//return base * power(base, exp-1);
+		return base * pwr * pwr;
 	}
 }
 

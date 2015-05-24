@@ -6,9 +6,9 @@ typedef struct {
 } Vector3D;
 // typedef float Vector3D[3];    // this is a bad idea.
 
-float  dotProduct(Vector3D a, Vector3D b);
+float    dotProduct(Vector3D a, Vector3D b);
 Vector3D crossProduct(Vector3D a, Vector3D b);
-float  scalarTripleProduct(Vector3D a, Vector3D b, Vector3D c);
+float    scalarTripleProduct(Vector3D a, Vector3D b, Vector3D c);
 Vector3D vectorTripleProduct(Vector3D a, Vector3D b, Vector3D c);
 
 int  getVector3D(Vector3D *a);
