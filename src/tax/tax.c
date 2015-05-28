@@ -7,7 +7,7 @@
 int main()
 {
 	double salary, tax;
-	if (scanf("%lf", &salary) == 1)
+	if (scanf("%lf", &salary) == 1) {
 		if (0 < salary && salary <= 750)
 			tax = salary * 0.02;
 		else if (750 < salary && salary <= 2250)
@@ -20,7 +20,8 @@ int main()
 			tax = 360 + (salary-5250)*0.20;
 		else if (salary > 7000)
 			tax = 710 + (salary-7000)*0.30;
-	printf("%.2lf\n", tax);
+		printf("%.2lf\n", tax);
+	}
 	return 0;
 }
 
