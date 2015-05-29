@@ -26,10 +26,9 @@
 
 long double powerfact1(long double x, long n)
 {
-	long double pwrft;
-	if (n > 0) pwrft = (powerfact1(x, n-1) * x) / n;
+	if (n > 0) return (powerfact1(x, n-1) * x) / n;
 	else if (n == 0) return 1;
-	return pwrft;
+	else exit(1);
 }
 
 long double powerfact2(long double x, long n)
@@ -37,6 +36,7 @@ long double powerfact2(long double x, long n)
 	long double pwrft;
 	if (n > 0) pwrft = powerfact2(x, n-1) * x;
 	else if (n == 0) return 1;
+	else exit(1);
 	return pwrft / n;
 }
 

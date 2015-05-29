@@ -6,7 +6,7 @@
 
 ## 第一次作业 - 0411 ##
 
-* 题1-sin与cos - `src/trig` (KONG Jing's, currently)
+* ~~题1-sin与cos - `src/trig` (KONG Jing's)~~
 
 * 题2-算税 - `src/tax`
 
