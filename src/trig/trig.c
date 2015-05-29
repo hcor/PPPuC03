@@ -31,7 +31,7 @@ long double powerfact1(long double x, long n)
 	else exit(1);
 }
 
-long double powerfact2(long double x, long n)
+long double powerfact2(long double x, long n)    // what's the difference? powerfact1 and powerfact2?
 {
 	long double pwrft;
 	if (n > 0) pwrft = powerfact2(x, n-1) * x;

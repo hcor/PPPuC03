@@ -10,8 +10,7 @@
 int strlen(const char s[])
 {
 	int len = 0;
-	while (s[len] != 0)
-		len++;
+	while (s[len] != 0) len++;
 	return len;
 }
 
@@ -25,7 +24,7 @@ void squeeze(const char s[], char sqz[])
 		}
 		i++;
 	}
-	sqz[j] = '\0';
+	sqz[j] = 0;
 }
 
 int huiwen(const char s[])
@@ -40,18 +39,16 @@ int huiwen(const char s[])
 void reverse(const char s[], char r[])
 {
 	int i, j;
-	for (i = (strlen(s)-1), j = 0; i >= 0; i--, j++)
-		r[j] = s[i];
-	r[j] = '\0';
+	for (i = (strlen(s)-1), j = 0; i >= 0; i--, j++) r[j] = s[i];
+	r[j] = 0;
 }
 
 int main()
 {
-	char s[MAX], sqz[MAX], r[MAX];
+	char s[MAX+1], sqz[MAX+1], r[MAX+1];
 	int i = 0;
 
-	while ((s[i] = getchar()) != '\n' && i < MAX)
-		i++;
+	while ((s[i] = getchar()) != '\n' && i < MAX) i++;
 	s[i] = '\0';
 	printf("String: %s, length: %d.\n", s, strlen(s));
 

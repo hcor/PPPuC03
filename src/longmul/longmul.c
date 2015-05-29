@@ -36,7 +36,6 @@
  * [5]: http://www.thinbasic.com/community/showthread.php?11206-C-multiplying-big-integers
  * [6]: http://numbers.computation.free.fr/Constants/Algorithms/fft.html
  * [7]: http://www.codeproject.com/Articles/106932/Addition-Multiplication-of-Very-Long-Integers
- * [8]: http://rosettacode.org/wiki/Long_multiplication
  * */
 
 #include <stdio.h>
