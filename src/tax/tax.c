@@ -1,7 +1,3 @@
-/*
- * this is boring ... i didn't give it much test ...
- * */
-
 #include <stdio.h>
 
 int main()

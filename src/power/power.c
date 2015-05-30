@@ -1,11 +1,3 @@
-/*
- * Remeber to take the benefit of recursion to reduce the number of 
- * multiplication operations required, e.g., if n=8, then is much more 
- * efficient to compute x*x as val1, then val1*val1 as val2, and the final 
- * answer is val2*val2 as val3, rather than to compute x*x*x*x*x*x*x*x 
- * (7 multiplications).
- * */
-
 #include <stdio.h>
 #include <stdlib.h>
 

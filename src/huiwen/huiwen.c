@@ -6,8 +6,7 @@
 
 #define MAX  1024
 
-/* to use the name `strlen`, compile with the option of `-fno-builtin`. */
-int strlen(const char s[])
+int strlen(const char s[])    // to use the symbol `strlen`, compile with `-fno-builtin`.
 {
 	int len = 0;
 	while (s[len] != 0) len++;
@@ -18,8 +17,9 @@ void squeeze(const char s[], char sqz[])
 {
 	int i = 0, j = 0;
 	while (s[i] != 0) {
-		if ( (s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z') ) {
-			sqz[j] = (s[i] >= 'A' && s[i] <= 'Z') ? s[i] + 32 : s[i];
+		if (('A' <= s[i] && s[i] <= 'Z') ||
+		    ('a' <= s[i] && s[i] <= 'z')) {
+			sqz[j] = ('A' <= s[i] && s[i] <= 'Z') ? s[i] + 32 : s[i];
 			j++;
 		}
 		i++;
@@ -49,6 +49,7 @@ int main()
 	int i = 0;
 
 	while ((s[i] = getchar()) != '\n' && i < MAX) i++;
+	//while ((s[i] = getchar()) != EOF && i < MAX) i++;
 	s[i] = '\0';
 	printf("String: %s, length: %d.\n", s, strlen(s));
 

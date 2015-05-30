@@ -1,13 +1,5 @@
-###################
-# Solution Basics #
-###################
-
 # All projects -> the solution.
 SOLUTION   ?= $(shell find src -name Makefile)
-
-########################
-# Solution Build Rules #
-########################
 
 .PHONY: all
 all: build

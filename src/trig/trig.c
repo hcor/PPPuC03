@@ -17,85 +17,75 @@
  *
  * [1]: https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=sysdeps/ieee754/dbl-64/s_sin.c;hb=HEAD
  *
- * following is basically KONG Jing's code.
+ * another interesting link:
+ *
+ * [2]: http://lolengine.net/blog/2011/12/21/better-function-approximations
+ *
+ * following is based on KONG Jing's code.
  * */
 
-/*#include <stdio.h>
+#include <stdio.h>
 
-#define PI 3.141592653589793238462643383279502384197169399375105820974944592
+#define PI    3.14159265358979323846
+#define PI_2  1.57079632679489661923
 
-long double powerfact1(long double x, long n)
+double powerfact(double x, long n)
 {
-	if (n > 0) return (powerfact1(x, n-1) * x) / n;
+	if (n > 0) return (powerfact(x, n-1) * x) / n;
 	else if (n == 0) return 1;
-	else exit(1);
+	//else return 0;
 }
 
-long double powerfact2(long double x, long n)    // what's the difference? powerfact1 and powerfact2?
+double sine(double x/*, long n*/)
 {
-	long double pwrft;
-	if (n > 0) pwrft = powerfact2(x, n-1) * x;
-	else if (n == 0) return 1;
-	else exit(1);
-	return pwrft / n;
-}
-
-long double sine(long double x, long n)
-{
-	long i, j;
-	long double sum = 0;
-	for (i = 1; i <= n; i++) {
-		if (i % 2 == 0) j = -1;
-		else j = 1;
-		sum += powerfact1(x, 2*i-1) * j;
+	//long i = 1, s = 1;
+	int i = 1, s = 1;
+	double pf, sum = 0;
+	/*for (i = 1; i <= n; i++) {
+		if (i%2) s = 1; else s = -1;
+		sum += powerfact(x, 2*i-1) * s;
+	}*/
+	while (1) {
+		pf = powerfact(x, 2*i-1);
+		if (-1e-16 < pf && pf < 1e-16) break; else sum += pf * s;
+		i++; s *= -1;
 	}
 	return sum;
 }
 
-long double cosine(long double x, long n)
+double cosine(double x/*, long n*/)
 {
-	long i, j;
-	long double sum = 0;
-	for (i = 0; i < n; i++) {
-		if (i % 2 == 0) j = 1;
-		else j = -1;
-		sum += powerfact1(x, 2*i) * j;
+	//long i = 0, s = 1;
+	int i = 0, s = 1;
+	double pf, sum = 0;
+	/*for (i = 0; i < n; i++) {
+		if (i%2) s = -1; else s = 1;
+		sum += powerfact(x, 2*i) * s;
+	}*/
+	while (1) {
+		pf = powerfact(x, 2*i);
+		if (-1e-16 < pf && pf < 1e-16) break; else sum += pf * s;
+		i++; s *= -1;
 	}
 	return sum;
 }
-
-long double exps(long double x, long n)
-{
-	long i;
-	long double sum = 0;
-	for (i = 0; i < n; i++)
-		sum += powerfact1(x, i);
-	return sum;
-}
-
-long double logs(long double x, long n)
-{
-	long i, j;
-	long double sum = 0;
-	for (i = 1; i < n; i++) {
-		if (i % 2 == 0) j = -1;
-		else j = 1;
-		sum += powerfact2(x, i) * j;
-	}
-	return sum;
-}*/
 
 int main()
 {
-	/*long double x;
-	if (scanf("%LF", &x) == 1) {
-		printf("exp = %.6LF\n", exps(x, 4096));
-		if (0 < x && x <= 2) printf("log = %.6LF\n", logs(x-1, 4096));
-		while (x >= 2 * PI) x -= 2 * PI;
-		while (x < 0)       x += 2 * PI;
-		printf("sin = %.6LF\n", sine  (x, 2048));
-		printf("cos = %.6LF\n", cosine(x, 2048));
-	}*/
+	double x;
+	double s, c;
+	if (scanf("%lf", &x) == 1) {
+		// range reduction.
+		while (x >= 2*PI) x -= 2*PI;
+		while (x < 0)     x += 2*PI;
+		if (0 <= x && x < PI_2) s = x, c = x;
+		else if (PI_2 <= x && x < PI) s = PI - x, c = x;
+		else if (PI <= x && x < PI+PI_2 ) s = PI - x, c = 2*PI - x;
+		else if (PI <= PI+PI_2 && x < 2*PI) s = x - 2*PI, c = 2*PI - x;
+		
+		printf("sin = %.6lf\n", sine  (s/*, 2048*/));
+		printf("cos = %.6lf\n", cosine(c/*, 2048*/));
+	}
 	return 0;
 }
 

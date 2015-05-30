@@ -46,11 +46,10 @@
 void longmul(const char *a, const char *b, char *c)
 {
 	int i = 0, j = 0, k = 0; 
-	int n, carry;
-	int la, lb;
+	int n, carry, la, lb;
  
 	/* zero will be zero. */
-	if (!strcmp(a,  "0") || !strcmp(b,  "0") || 
+	if (!strcmp(a,  "0") || !strcmp(b,  "0") ||
 	    !strcmp(a, "-0") || !strcmp(b, "-0")) {
 		c[0] = '0', c[1] = '\0';
 		return;
@@ -73,7 +72,8 @@ void longmul(const char *a, const char *b, char *c)
 	/* do the multiplication as if by hand. */	
 #	define I(a) (a - '0')
 	for (i = la - 1; i >= 0; i--) {
-		for (j = lb - 1, k = i + j + 1, carry = 0; j >= 0; j--, k--) {
+		carry = 0;
+		for (j = lb - 1, k = i + j + 1; j >= 0; j--, k--) {
 			n = I(a[i]) * I(b[j]) + I(c[k]) + carry;
 			carry = n / 10;
 			c[k] = (n % 10) + '0';
