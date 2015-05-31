@@ -78,9 +78,11 @@ int main()
 		// range reduction.
 		while (x >= 2*PI) x -= 2*PI;
 		while (x < 0)     x += 2*PI;
-		if (0 <= x && x < PI_2) s = x, c = x;
-		else if (PI_2 <= x && x < PI) s = PI - x, c = x;
-		else if (PI <= x && x < PI+PI_2 ) s = PI - x, c = 2*PI - x;
+
+		// sin -> -PI/2~PI/2, cos -> 0~PI.
+		if (0 <= x && x < PI_2)             s = x,        c = x;
+		else if (PI_2 <= x && x < PI)       s = PI - x,   c = x;
+		else if (PI <= x && x < PI+PI_2 )   s = PI - x,   c = 2*PI - x;
 		else if (PI <= PI+PI_2 && x < 2*PI) s = x - 2*PI, c = 2*PI - x;
 		
 		printf("sin = %.6lf\n", sine  (s/*, 2048*/));

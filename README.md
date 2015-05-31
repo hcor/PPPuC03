@@ -6,11 +6,11 @@
 
 ## 第一次作业 - 0411 ##
 
-* 题1-sin与cos - `src/trig` (KONG Jing's)
+* 题1-sin与cos - `src/trig` (KONG Jing)
 
 * 题2-算税 - `src/tax`
 
-* 题3-回文判定 - `src/huiwen` (CHEN Yubi's)
+* 题3-回文判定 - `src/huiwen` (CHEN Yubi)
 
 * 题4-递归求幂 - `src/power`
 
@@ -24,7 +24,7 @@
 
 * 题3-递归回文 - `src/palindrome`
 
-* 题4-四整数最大最小 - `src/minmax4` (KONG Jing's)
+* 题4-四整数最大最小 - `src/minmax4` (KONG Jing)
 
 * 题5-十进制转八进制 - `src/dec2oct`
 
@@ -32,7 +32,7 @@
 
 * 题1-浮点数判定 - *待更新…*
 
-* 题2-元音统计 - *待更新…*
+* 题2-元音统计 - `src/aoe(啊喔呃)` (ZHU Tianyao)
 
 * 题3-日期格式 - *待更新…*
 
@@ -42,17 +42,17 @@
 
 * 题1-strstr - `src/strstr`
 
-* 题2-head - `src/head` (ZHU Tianyao's)
+* 题2-head - `src/head` (ZHU Tianyao)
 
-* 题3-“1”的个数 - `src/numof1` (KONG Jing's)
+* 题3-“1”的个数 - `src/numof1` (KONG Jing)
 
-* 题4-大数字显示 - `src/bigdigit` (ZHU Tianyao's)
+* 题4-大数字显示 - `src/bigdigit` (ZHU Tianyao)
 
 ## 第五次作业 - 0516 ##
 
 * 题1-两点距离 - `src/dist`
 
-* 题2-完全数 - `src/perfnum` (LAN Qingfeng's)
+* 题2-完全数 - `src/perfnum` (LAN Qingfeng)
 
 * 题3-添加参数 - `Unit11_studentscore.c` in our QQ group
 
