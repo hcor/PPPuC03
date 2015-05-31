@@ -33,7 +33,7 @@ double powerfact(double x, long n)
 {
 	if (n > 0) return (powerfact(x, n-1) * x) / n;
 	else if (n == 0) return 1;
-	//else return 0;
+	else return 0;
 }
 
 double sine(double x/*, long n*/)

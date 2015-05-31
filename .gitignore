@@ -4,3 +4,8 @@ obj/
 tests/
 *swp
 *~
+
+Release/
+Debug/
+*suo
+*user

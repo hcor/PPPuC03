@@ -13,15 +13,14 @@ int palindrome(const char *s, int begin, int end)
 
 int main()
 {
-	char s[MAX];
+	char s[MAX+1];
 	int len;
 
 	// guys, remember to clean your memory before use.
 	memset(s, 0, sizeof(s));
 
-	printf("Enter your string (less than %d charactors): ", MAX);
 	//if (scanf("%s", s) != EOF) {
-	if (scanf("%s", s) != EOF) {    // better check conversions than EOF.
+	if (scanf("%1024s", s) == 1) {    // better check conversions than EOF.
 		len = strlen(s);
 		printf("%s!\n", palindrome(s, 0, len) ? "Y" : "N");
 	}

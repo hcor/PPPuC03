@@ -6,7 +6,7 @@
 
 #define MAX  1024
 
-int strlen(const char s[])    // to use the symbol `strlen`, compile with `-fno-builtin`.
+int mystrlen(const char s[])    // to use the symbol `mystrlen`, compile with `-fno-builtin`.
 {
 	int len = 0;
 	while (s[len] != 0) len++;
@@ -30,7 +30,7 @@ void squeeze(const char s[], char sqz[])
 int huiwen(const char s[])
 {
 	int i, j;
-	for (i = 0, j = (strlen(s)-1); i <= j; i++, j--)
+	for (i = 0, j = (mystrlen(s)-1); i <= j; i++, j--)
 		if (s[i] != s[j])
 			return 1;
 	return 0;
@@ -39,7 +39,7 @@ int huiwen(const char s[])
 void reverse(const char s[], char r[])
 {
 	int i, j;
-	for (i = (strlen(s)-1), j = 0; i >= 0; i--, j++) r[j] = s[i];
+	for (i = (mystrlen(s)-1), j = 0; i >= 0; i--, j++) r[j] = s[i];
 	r[j] = 0;
 }
 
@@ -51,15 +51,15 @@ int main()
 	while ((s[i] = getchar()) != '\n' && i < MAX) i++;
 	//while ((s[i] = getchar()) != EOF && i < MAX) i++;
 	s[i] = '\0';
-	printf("String: %s, length: %d.\n", s, strlen(s));
+	printf("String: %s, length: %d.\n", s, mystrlen(s));
 
 	squeeze(s, sqz);
-	printf("Squeezed: %s, length: %d.\n", sqz, strlen(sqz));
+	printf("Squeezed: %s, length: %d.\n", sqz, mystrlen(sqz));
 
 	if (huiwen(sqz)) {
 		printf("No!\n");
 		reverse(s, r);
-		printf("Reversed: %s, length: %d.\n", r, strlen(r));
+		printf("Reversed: %s, length: %d.\n", r, mystrlen(r));
 	} else {
 		printf("Yes!\n");
 	}

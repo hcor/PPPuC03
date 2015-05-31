@@ -23,8 +23,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
+
+#ifdef __GNUC__
+	#include <stdbool.h>
+#endif /* __GNUC__ */
+
+#if _MSC_VER && !__INTEL_COMPILER && !__cplusplus
+	#define bool int
+	#define true  1
+	#define false 0
+#endif /* _MSC_VER && !__INTEL_COMPILER */
 
 #define MAX 4096
 #define STRINGIFY(x) STRINGIFY2(x)

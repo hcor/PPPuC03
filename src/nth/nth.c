@@ -4,6 +4,10 @@
 
 #define MAX    1024
 
+#ifdef WIN32
+	#define snprintf _snprintf
+#endif /* WIN32 */
+
 void addSuffix(int num, char *buf, size_t len)
 {
 	char *suffixes[4] = { "th", "st", "nd", "rd" };
