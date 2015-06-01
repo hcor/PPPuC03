@@ -13,7 +13,7 @@ int one(unsigned int num)
 }
 
 int main()
-{ 
+{
 	unsigned int num;
 	if (scanf("%u", &num) == 1) printf("%d\n", one(num));
 	return 0;

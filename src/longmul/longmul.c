@@ -2,7 +2,7 @@
  * An integer in C is typically 32 bits, of which 31 can be used for positive 
  * integer arithmetic. This is good for representing numbers up to about 2 
  * billion (2147483648). A "long long" type gives 64 bits capable of 
- * representing about 9 quintillion (9.223372037×10^18).
+ * representing about 9 quintillion (9.223372037x10^18).
  *
  * Some applications may require many more digits than this. For example, 
  * public-key encryption with the RSA algorithm typically requires 300 digit 
