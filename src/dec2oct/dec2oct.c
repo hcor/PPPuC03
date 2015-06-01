@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define LEN 5
+#define LEN  5
 
 int main()
 {

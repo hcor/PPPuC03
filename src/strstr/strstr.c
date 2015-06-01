@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define MAX    1024
+#define MAX 1024
+#define STRINGIFY(x) STRINGIFY2(x)
+#define STRINGIFY2(x) #x
 
 char *strstr(const char *haystack, const char *needle)
 {
@@ -32,13 +34,13 @@ char *strstr(const char *haystack, const char *needle)
 
 int main()
 {
-	char a[MAX], b[MAX];
+	char a[MAX+1], b[MAX+1];
 	char* result;
 
 	//void call_strstr() { result = strstr(a, b); }
 	//scanf("%s%s", a, b) == EOF ? exit(1) : call_strstr();
 
-	if (scanf("%s%s", a, b) == 2) {    // better check conversions than EOF.
+	if (scanf("%" STRINGIFY(MAX) "s%" STRINGIFY(MAX) "s", a, b) == 2) {
 		result = strstr(a, b);
 		if (result) printf("%ld\n", result-a+1);
 		else printf("NOT FOUND!\n");

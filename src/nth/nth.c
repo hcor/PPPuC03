@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX    1024
+#define MAX  1024
 
 #ifdef WIN32
 	#define snprintf _snprintf
@@ -34,7 +34,6 @@ int main()
 	// guys, remember to clean your memory before use.
 	memset(buf, 0, sizeof(buf));
 
-	printf("Enter your number: ");
 	//if (scanf("%d", &num) != EOF) {
 	if (scanf("%d", &num) == 1) {    // better check number of conversions than EOF.
 		addSuffix(num, buf, sizeof(buf));

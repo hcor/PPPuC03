@@ -33,7 +33,7 @@
 	#define bool int
 	#define true  1
 	#define false 0
-#endif /* _MSC_VER && !__INTEL_COMPILER */
+#endif /* _MSC_VER && !__INTEL_COMPILER && !__cplusplus */
 
 #define MAX 4096
 #define STRINGIFY(x) STRINGIFY2(x)

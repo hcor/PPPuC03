@@ -29,26 +29,27 @@ int main(int argc, char *argv[])
 	if (*argv[1] == '-') {    // print by lines or charactors.
 		switch (*(argv[1]+1)) {
 		case 'c':
-			while (!feof(stdin) && i < n) {
-				c[0] = fgetc(stdin);
-				c[0] == EOF ? exit(3) : printf("%c", c[0]);
+			while ((c[0] = fgetc(stdin)) != EOF && i < n) {
+				printf("%c", c[0]);
 				i++;
 			}
 			break;
 		case 'n':
-			while (!feof(stdin) && i < n) {
+			memset(c, '\n', sizeof(c));    // `fgets` will not stop when it encouters a `NULL`.
+			                               // and this kludge is stupid and ugly :)
+			while (fgets(c, sizeof(c), stdin) != NULL && i < n) {
+				printf("%s", c);
 				memset(c, '\n', sizeof(c));
-				fgets(c, sizeof(c), stdin) == NULL ? exit(3) : printf("%s", c);
 				i++;
 			}
 			break;
 		default:
 			fprintf(stderr, "Unknown options!\n");
-			exit(4);
+			exit(3);
 		}
 	} else {
 		fprintf(stderr, "Illegal options!\n");
-		exit(5);
+		exit(4);
 	}
 
 	return 0;
