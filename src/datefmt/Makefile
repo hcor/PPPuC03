@@ -3,7 +3,7 @@
 ##################
 
 # Project name and global directory layout
-PROJECT       := date
+PROJECT       := datefmt
 PROJECTDIR    := .
 
 ROOT          := $(PROJECTDIR)/../..
@@ -17,7 +17,7 @@ OBJDIR        := $(PROJECTDIR)/obj
 OUTPUTDIR      = $(BIN)/$(CONFIGURATION)
 
 # Project files 
-CFILES        := $(PROJECTDIR)/date.c
+CFILES        := $(PROJECTDIR)/datefmt.c
 CCFILES       := 
 DEPFILES      := 
 

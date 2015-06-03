@@ -22,7 +22,7 @@ int main()
 
 		year = 0;
 		for (i = 0; i < 4; i++)
-			if (isdigit(*p)) year = 10*year + (*p++ - '0');
+			if (isdigit(*p)) year = 10 * year + (*p++ - '0');
 			else goto NaD;
 		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) mdays[1] = 29;
 
@@ -30,7 +30,7 @@ int main()
 
 		month = 0;
 		for (i = 0; i < 2; i++)
-			if (isdigit(*p)) month = 10*month + (*p++ - '0');
+			if (isdigit(*p)) month = 10 * month + (*p++ - '0');
 			else goto NaD;
 		if (month < 1 || month > 12) goto NaD;
 
@@ -38,7 +38,7 @@ int main()
 
 		day = 0;
 		for (i = 0; i < 2; i++)
-			if (isdigit(*p)) day = 10*day + (*p++ - '0');
+			if (isdigit(*p)) day = 10 * day + (*p++ - '0');
 			else goto NaD;
 		if (day < 1 || day > mdays[month-1]) goto NaD;
 

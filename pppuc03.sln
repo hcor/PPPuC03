@@ -37,6 +37,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subpal", "src\subpal\subpal
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vector3d", "src\vector3d\vector3d.vcxproj", "{A84323D7-7C62-4E0D-9790-89A286FAEFB8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "isfloat", "src\isfloat\isfloat.vcxproj", "{19C3D2EF-DC20-425E-84AF-9DDB021EAA70}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datefmt", "src\datefmt\datefmt.vcxproj", "{EB8BA58F-2E5B-44A3-8E10-E9029804CEF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -115,6 +119,14 @@ Global
 		{A84323D7-7C62-4E0D-9790-89A286FAEFB8}.Debug|Win32.Build.0 = Debug|Win32
 		{A84323D7-7C62-4E0D-9790-89A286FAEFB8}.Release|Win32.ActiveCfg = Release|Win32
 		{A84323D7-7C62-4E0D-9790-89A286FAEFB8}.Release|Win32.Build.0 = Release|Win32
+		{19C3D2EF-DC20-425E-84AF-9DDB021EAA70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{19C3D2EF-DC20-425E-84AF-9DDB021EAA70}.Debug|Win32.Build.0 = Debug|Win32
+		{19C3D2EF-DC20-425E-84AF-9DDB021EAA70}.Release|Win32.ActiveCfg = Release|Win32
+		{19C3D2EF-DC20-425E-84AF-9DDB021EAA70}.Release|Win32.Build.0 = Release|Win32
+		{EB8BA58F-2E5B-44A3-8E10-E9029804CEF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB8BA58F-2E5B-44A3-8E10-E9029804CEF3}.Debug|Win32.Build.0 = Debug|Win32
+		{EB8BA58F-2E5B-44A3-8E10-E9029804CEF3}.Release|Win32.ActiveCfg = Release|Win32
+		{EB8BA58F-2E5B-44A3-8E10-E9029804CEF3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
