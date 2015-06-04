@@ -13,32 +13,37 @@
  * */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define ORDER  4
-#define N      16   // (ORDER*ORDER)
+#define N      16    // (ORDER*ORDER)
 
 #ifdef __GNUC__
-	typedef unsigned uint128 __attribute__ ((mode (TI)));
-#endif
+	typedef unsigned byte16 __attribute__ ((mode (TI)));
+	typedef unsigned char byte;
+#endif  // __GNUC__
 
 #ifdef _MSC_VER
-	typedef unsigned __int128 uint128;
-#endif
-
-typedef unsigned char byte;
+	typedef unsigned /*__int128*/ byte16;    // this is wrong; M$ cl doesn't have `__int128`.
+	typedef char byte;
+#endif  // _MSC_VER
 
 int main()
 {
-	int msum = (1 + N) * N / 2 / ORDER - ORDER, count = 0;
-	uint128 ss; byte *s, s0;
-	unsigned short n, i;
+	int msum = (1 + N) * N / 2 / ORDER - ORDER, count = 0, i;
+	byte16 s16;    // 16 bytes: each for one number/cell.
+	byte *s, s0;
+	unsigned short n;    // 16 bits: each indicates a number.
 
-	#pragma omp parallel firstprivate(msum) private(ss, s, n)
+	#pragma omp parallel firstprivate(msum) private(s16, s, n)
 	{
-	s = (byte *) &ss; n = 0;
+	s = (byte *) &s16; n = 0;
+	#ifdef _MSC_VER    // is there a 16-byte data type in M$ VS???
+	s = (byte *) malloc(N * sizeof(byte));
+	#endif
 
-	#pragma omp for reduction(+:count)	
-	for (s0 = 0; s0 < N; s0++) {    // to make omp compile ...
+	#pragma omp for reduction(+:count)
+	for (s0 = 0; s0 < N; s0++) {    // s0: just to make omp compile ...
 	//for (*s = 0; *s < N; (*s)++) {
 	s[0] = s0;
 	if (!(n&(1<<s[0]))) {
@@ -177,6 +182,9 @@ int main()
 
 	} /* omp for */
 
+	#ifdef _MSC_VER
+	free(s);
+	#endif
 	} /* omp parallel */
 
 	printf("\nFOUND: %d\n", count);

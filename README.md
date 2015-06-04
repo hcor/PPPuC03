@@ -36,7 +36,7 @@
 
 * 题3-日期格式 - `src/datefmt`
 
-* 题4-四阶幻方 - *待更新…*
+* 题4-四阶幻方 - `src/msquare`
 
 ## 第四次作业 - 0511 ##
 
@@ -97,4 +97,6 @@
 
 # 关于VS #
 
-包含了VS工程文件，Windows下双击`pppuc03.sln`即可打开；我使用的VS版本为2010。
+代码库中包含了Visual Studio的工程文件，Windows下双击`pppuc03.sln`即可打开；我使用的VS版本为2010。
+
+如果编译OpenMP需要`vcomp.lib`静态库，运行需要`vcomp90.dll`动态库。
