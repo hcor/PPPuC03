@@ -1,7 +1,3 @@
-##################
-# Project Basics #
-##################
-
 # Project name and global directory layout
 PROJECT       := msquare
 PROJECTDIR    := .
@@ -24,10 +20,6 @@ DEPFILES      :=
 OBJFILES      := $(patsubst %.c,$(OBJDIR)/%.o,$(notdir $(CFILES))) \
                  $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(CCFILES)))
 TARGETFILE     = $(OUTPUTDIR)/$(PROJECT)
-
-##################
-# Compiler Setup #
-##################
 
 # Compiler
 CC            := gcc
@@ -87,10 +79,6 @@ CFLAGS      += $(CWARN) $(ARCH) $(DEBUG) $(INCLUDES)
 CXXFLAGS    += $(CXXWARN) $(ARCH) $(DEBUG) $(INCLUDES)
 LDFLAGS     += $(LIBRARIES)
 
-#########
-# MISC. #
-#########
-
 # Verbose
 ifeq ($(quiet), 1)
 	QUIET := @
@@ -98,9 +86,6 @@ else
 	QUIET := 
 endif
 
-#######################
-# Project Build Rules #
-#######################
 
 .PHONY: all
 all: build
