@@ -1,5 +1,5 @@
 # project name and global directory layout
-PROJECT       := msquare
+PROJECT       := nxn
 PROJECTDIR    := .
 
 ROOT          := $(PROJECTDIR)/../..
@@ -13,7 +13,7 @@ OBJDIR        := $(PROJECTDIR)/obj
 OUTPUTDIR      = $(BIN)/$(CONFIGURATION)
 
 # project files
-CFILES        := $(PROJECTDIR)/msquare.c
+CFILES        := $(PROJECTDIR)/nxn.c
 CCFILES       :=
 DEPFILES      :=
 
