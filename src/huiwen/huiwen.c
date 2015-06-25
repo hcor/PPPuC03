@@ -6,7 +6,7 @@
 
 #define MAX  1024
 
-int mystrlen(const char s[])    // to use the symbol `mystrlen`, compile with `-fno-builtin`.
+int mystrlen(const char s[])    /* to use the symbol `mystrlen`, compile with `-fno-builtin`. */
 {
 	int len = 0;
 	while (s[len] != 0) len++;

@@ -7,7 +7,7 @@ int power(int base, int exp)
 
 	if (exp == 0) return 1;
 
-	pwr = power(base, exp/2);    // FU Xin asked for this change.
+	pwr = power(base, exp/2);    /* FU Xin asked for this change. */
 	if (exp % 2 == 0) {
 		//pwr = power(base, exp/2);
 		return pwr * pwr;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	// i'm lazy so i just use `strtol()` :-)
+	/* i'm lazy so i just use `strtol()` :-) */
 	printf("%d\n", power(strtol(argv[1], NULL, 10), strtol(argv[2], NULL, 10)));
 
 	return 0;

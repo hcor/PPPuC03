@@ -17,7 +17,7 @@ int main()
 	int i, j, k;
 	int len;
 
-	if (scanf("%20s", n) == 1) {    // mind that no more than 20 digits.
+	if (scanf("%20s", n) == 1) {    /* mind that no more than 20 digits. */
 		len = strlen(n);
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < len; j++)

@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "vector3d.h"    // ../../inc/vector3d.h
+#include "vector3d.h"    /* ../../inc/vector3d.h */
 
 int main()
 {
-	// Vector3D a = {3, 4, 5}, b = {4, 3, 5}, c = {-5, -12, -13};    // i know i'm lazy ...
+	// Vector3D a = {3, 4, 5}, b = {4, 3, 5}, c = {-5, -12, -13};    /* i know i'm lazy ... */
 	Vector3D a, b, c;
 
 	printf("Please enter your vectors (\"x,y,z\") ...\n");

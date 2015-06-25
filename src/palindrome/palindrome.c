@@ -18,11 +18,11 @@ int main()
 	char s[MAX+1];
 	int len;
 
-	// guys, remember to clean your memory before use.
+	/* guys, remember to clean your memory before use. */
 	memset(s, 0, sizeof(s));
 
 	//if (scanf("%s", s) != EOF) {
-	if (scanf("%" STRINGIFY(MAX) "s", s) == 1) {    // better check conversions than EOF.
+	if (scanf("%" STRINGIFY(MAX) "s", s) == 1) {    /* better check conversions than EOF. */
 		len = strlen(s);
 		printf("%s!\n", palindrome(s, 0, len) ? "Y" : "N");
 	}

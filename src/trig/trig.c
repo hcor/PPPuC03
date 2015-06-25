@@ -41,10 +41,10 @@ double sine(double x/*, long n*/)
 	//long i = 1, s = 1;
 	int i = 1, s = 1;
 	double pf, sum = 0;
-	/*for (i = 1; i <= n; i++) {
-		if (i%2) s = 1; else s = -1;
-		sum += powerfact(x, 2*i-1) * s;
-	}*/
+	//for (i = 1; i <= n; i++) {
+	//	if (i%2) s = 1; else s = -1;
+	//	sum += powerfact(x, 2*i-1) * s;
+	//}
 	while (1) {
 		pf = powerfact(x, 2*i-1);
 		if (-1e-16 < pf && pf < 1e-16) break; else sum += pf * s;
@@ -58,10 +58,10 @@ double cosine(double x/*, long n*/)
 	//long i = 0, s = 1;
 	int i = 0, s = 1;
 	double pf, sum = 0;
-	/*for (i = 0; i < n; i++) {
-		if (i%2) s = -1; else s = 1;
-		sum += powerfact(x, 2*i) * s;
-	}*/
+	//for (i = 0; i < n; i++) {
+	//	if (i%2) s = -1; else s = 1;
+	//	sum += powerfact(x, 2*i) * s;
+	//}
 	while (1) {
 		pf = powerfact(x, 2*i);
 		if (-1e-16 < pf && pf < 1e-16) break; else sum += pf * s;
@@ -75,11 +75,11 @@ int main()
 	double x;
 	double s, c;
 	if (scanf("%lf", &x) == 1) {
-		// range reduction.
+		/* range reduction. */
 		while (x >= 2*PI) x -= 2*PI;
 		while (x < 0)     x += 2*PI;
 
-		// sin -> -PI/2~PI/2, cos -> 0~PI.
+		/* sin -> -PI/2~PI/2, cos -> 0~PI. */
 		if (0 <= x && x < PI_2)             s = x,        c = x;
 		else if (PI_2 <= x && x < PI)       s = PI - x,   c = x;
 		else if (PI <= x && x < PI+PI_2 )   s = PI - x,   c = 2*PI - x;

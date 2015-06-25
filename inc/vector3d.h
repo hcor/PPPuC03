@@ -4,7 +4,7 @@
 typedef struct {
 	float x, y, z;
 } Vector3D;
-// typedef float Vector3D[3];    // this is a bad idea.
+// typedef float Vector3D[3];    /* this is a bad idea. */
 
 float    dotProduct(Vector3D a, Vector3D b);
 Vector3D crossProduct(Vector3D a, Vector3D b);

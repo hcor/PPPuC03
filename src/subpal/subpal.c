@@ -44,19 +44,19 @@ int main()
 	int start, maxLen;
 	int i, j, k, len;
 	char str[MAX+1];
-	bool **table;    // if substring [i...j] is a palindrome, table[i][j] will be true.
-	//bool table[MAX][MAX];    // this is local, and for big MAX, it would overflow the stack at the runtime.
-	//                         // making them static or global will avoid segfault.
-	//                         // remember that space for local data on call stack is always a scare resource.
-	//bool *table;    // just malloc(r*c*sizeof(type)), and table[i][j] should be table[i*c+j], or *(table+i*c+j).
+	bool **table;    /* if substring [i...j] is a palindrome, table[i][j] will be true. */
+	//bool table[MAX][MAX];    /* this is local, and for big MAX, it would overflow the stack at the runtime.
+	//                          * making them static or global will avoid segfault.
+	//                          * remember that space for local data on call stack is always a scare resource. */
+	//bool *table;    /* just malloc(r*c*sizeof(type)), and table[i][j] should be table[i*c+j], or *(table+i*c+j). */
 
-	if (scanf("%" STRINGIFY(MAX) "s", str) == 1) len = strlen(str);    // less than 4096 bytes.
+	if (scanf("%" STRINGIFY(MAX) "s", str) == 1) len = strlen(str);    /* less than 4096 bytes. */
 	else exit(1);
 
-	for (i = 0; i < len; i++)    // turn all charactors into lowercase.
+	for (i = 0; i < len; i++)    /* turn all charactors into lowercase. */
 		str[i] = (('A'<=str[i]) && (str[i]<='Z')) ? 'a'+(str[i]-'A') : str[i];
 
-	table = malloc(len*sizeof(bool *) + len*len*sizeof(bool));    // dynamically allocate the table array.
+	table = malloc(len*sizeof(bool *) + len*len*sizeof(bool));    /* dynamically allocate the table array. */
 	*table = (bool *)(table + len);
 	for (i = 1; i < len; i++)
 		*(table+i) = *table + i*len;
@@ -64,10 +64,10 @@ int main()
 
 	maxLen = 1;
 	for (i = 0; i < len; i++)
-		table[i][i] = true;    // one single char is a palindrome.
+		table[i][i] = true;    /* one single char is a palindrome. */
 
 	start = 0;
-	for (i = 0; i < len-1; i++) {    // check all sub-strings of length 2.
+	for (i = 0; i < len-1; i++) {    /* check all sub-strings of length 2. */
 		if (str[i] == str[i+1]) {
 			table[i][i+1] = true;
 			start = i;
@@ -75,11 +75,11 @@ int main()
 		}
 	}
 
-	for (k = 3; k <= len; k++) {   // check sub-strings of length greater than 2 (k).
-		for (i = 0; i < len-k+1; i++) {    // i is the starting index.
-			j = i + k - 1;             // j is the ending index.
-			if (table[i+1][j-1] && str[i] == str[j]) {    // if str[i+1...j-1] is a palindrome and str[i] equals to str[j],
-				table[i][j] = true;                   // then str[i...j] is a palindrome.
+	for (k = 3; k <= len; k++) {   /* check sub-strings of length greater than 2 (k). */
+		for (i = 0; i < len-k+1; i++) {    /* i is the starting index. */
+			j = i + k - 1;             /* j is the ending index. */
+			if (table[i+1][j-1] && str[i] == str[j]) {    /* if str[i+1...j-1] is a palindrome and str[i] equals to str[j], */
+				table[i][j] = true;                   /* then str[i...j] is a palindrome. */
 				if (k > maxLen) {
 					start = i;
 					maxLen = k;
@@ -88,11 +88,11 @@ int main()
 		}
 	}
 
-	for (i = start; i < start + maxLen; i++)    // print the longest palindrome sub-string.
+	for (i = start; i < start + maxLen; i++)    /* print the longest palindrome sub-string. */
 		printf("%c", str[i]);
-	printf("\n%d\n", maxLen);    // print the length of longest sub-palindrome.
+	printf("\n%d\n", maxLen);    /* print the length of longest sub-palindrome. */
 
-	free(table);    // never forget to release your "malloc"ed memory.
+	free(table);    /* never forget to release your "malloc"ed memory. */
 
 	return 0;
 }

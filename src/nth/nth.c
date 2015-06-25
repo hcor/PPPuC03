@@ -31,11 +31,11 @@ int main()
 	int num;
 	char buf[MAX];
 
-	// guys, remember to clean your memory before use.
+	/* guys, remember to clean your memory before use. */
 	memset(buf, 0, sizeof(buf));
 
 	//if (scanf("%d", &num) != EOF) {
-	if (scanf("%d", &num) == 1) {    // better check number of conversions than EOF.
+	if (scanf("%d", &num) == 1) {    /* better check number of conversions than EOF. */
 		addSuffix(num, buf, sizeof(buf));
 		printf("%s\n", buf);
 	}

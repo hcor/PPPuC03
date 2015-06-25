@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-#define OFFSET(x) (('A' <= (x) && (x) <= 'Z') ? ((x) - 'A') : ((x) - 'a'))    // be careful with such things.
+#define OFFSET(x) (('A' <= (x) && (x) <= 'Z') ? ((x) - 'A') : ((x) - 'a'))    /* be careful with such things. */
 
 int main()
 {
