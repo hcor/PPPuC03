@@ -80,11 +80,11 @@
 
 # 关于git #
 
-虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git。git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
+虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/hcor/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git。git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
 
 ```
     sudo apt-get install git
-    git clone https://github.com/qzan/pppuc03.git
+    git clone https://github.com/hcor/pppuc03.git
 ```
 
 下载完后就可以去`pppuc03`目录中读代码了。今后代码库有了更新，可以在`pppuc03`目录下直接敲命令：
@@ -110,4 +110,6 @@
 代码库中包含了Visual Studio的工程文件，Windows下双击`pppuc03.sln`即可打开；我使用的VS版本为2010。
 
 另：如果编译OpenMP需要`vcomp.lib`静态库，运行需要`vcomp90.dll`动态库。
+
+![四阶幻方OMP](http://7xk0df.com1.z0.glb.clouddn.com/msquare.png)
 
