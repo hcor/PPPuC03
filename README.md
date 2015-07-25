@@ -80,11 +80,11 @@
 
 # 关于git #
 
-虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/hcor/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git。git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
+虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan9/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git。git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
 
 ```
     sudo apt-get install git
-    git clone https://github.com/hcor/pppuc03.git
+    git clone https://github.com/qzan9/pppuc03.git
 ```
 
 下载完后就可以去`pppuc03`目录中读代码了。今后代码库有了更新，可以在`pppuc03`目录下直接敲命令：
