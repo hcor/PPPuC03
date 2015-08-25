@@ -103,13 +103,15 @@
 
 感兴趣的童鞋也可以学一下make，make是一个build管理工具；M$ VS的解决方案、工程项目等的东西，可以看作是make的图形化。
 
-另：四阶幻方如需编译OpenMP，`make omp=1`即可。
-
 # 关于VS #
 
 代码库中包含了Visual Studio的工程文件，Windows下双击`pppuc03.sln`即可打开；我使用的VS版本为2010。
 
-另：编译OpenMP需要`vcomp.lib`静态库（[点我下载](http://pan.baidu.com/s/1590Ai)），运行需要`vcomp90.dll`动态库（[点我下载](http://pan.baidu.com/s/1eQJExmq)）。
+注：编译OpenMP需要`vcomp.lib`静态库（[点我下载](http://pan.baidu.com/s/1590Ai)），运行需要`vcomp90.dll`动态库（[点我下载](http://pan.baidu.com/s/1eQJExmq)）。
 
 ![四阶幻方OMP](http://7xk0df.com1.z0.glb.clouddn.com/msquare.png)
+
+# 其他 #
+
+[Go版](https://github.com/qzan9/PPPuC03-Go)，[Scala版](https://github.com/qzan9/PPPuC03-Scala)。
 
