@@ -115,5 +115,5 @@
 
 # 其他 #
 
-[Go版](https://github.com/qzan9/PPPuC03-Go)，[Scala版](https://github.com/qzan9/PPPuC03-Scala)。
+~~[Go版](https://github.com/qzan9/PPPuC03-Go)~~，[Scala版](https://github.com/qzan9/PPPuC03-Scala)。
 
