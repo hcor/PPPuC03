@@ -4,9 +4,9 @@
 
 部分代码选取自做的比较好的童鞋的作业（已标注），供大家参考。如有bug，欢迎大家拍砖。
 
-# 代码说明 #
+## 代码说明 ##
 
-## 第一次作业 - 0411 ##
+### 第一次作业 - 0411 ###
 
 * 题1-sin与cos - `src/trig` (KONG Jing)
 
@@ -18,7 +18,7 @@
 
 * 题5-大整数相乘 - `src/longmul`
 
-## 第二次作业 - 0418 ##
+### 第二次作业 - 0418 ###
 
 * 题1-向量积 - `src/vector3d`
 
@@ -30,7 +30,7 @@
 
 * 题5-十进制转八进制 - `src/dec2oct`
 
-## 第三次作业 - 0425 ##
+### 第三次作业 - 0425 ###
 
 * 题1-浮点数判定 - `src/isfloat`
 
@@ -40,7 +40,7 @@
 
 * 题4-四阶幻方 - `src/msquare`
 
-## 第四次作业 - 0511 ##
+### 第四次作业 - 0511 ###
 
 * 题1-strstr - `src/strstr`
 
@@ -50,7 +50,7 @@
 
 * 题4-大数字显示 - `src/bigdigit` (ZHU Tianyao)
 
-## 第五次作业 - 0516 ##
+### 第五次作业 - 0516 ###
 
 * 题1-两点距离 - `src/dist`
 
@@ -60,7 +60,7 @@
 
 * 题4-最长回文子串 - `src/subpal` (check [LeetCode](http://articles.leetcode.com/2011/11/longest-palindromic-substring-part-i.html))
 
-## 第六次作业 - 0523 ##
+### 第六次作业 - 0523 ###
 
 * 题1-字母计数之数组 - `src/letterc`
 
@@ -70,7 +70,7 @@
 
 * 题4-交叉引用与排序 - `lan_DirectAndClear_f4.c` in our QQ group
 
-## 第七次作业 - 0530 ##
+### 第七次作业 - 0530 ###
 
 * 题1-字符串加密 - `src/strenc`
 
@@ -80,7 +80,7 @@
 
 * 题4-口令字符串加密 - `src/pwdenc` (WANG Lei)
 
-# 关于git #
+## 关于git ##
 
 虽然`github.com`中的代码可以直接Web浏览与下载，比如下载全部代码包可以[点我](https://github.com/qzan9/PPPuC03/archive/master.zip)，但建议感兴趣的童鞋学一下git。git是Linus Torvalds的第二个开源作品，是一个分布式版本控制工具。这坨代码就是用git管的，比如在Ubuntu下：
 
@@ -99,21 +99,19 @@
 
 当然也欢迎大家向我`push`代码；作业虽然简单，但写得精致点并分享出来，对学习还是很有帮助的。
 
-# 关于make #
+## 关于make ##
 
 代码库中包含了`Makefile`，在`pppuc03`目录下键入`make`即可编译，编译得到的可执行文件默认保存到了`bin`目录下。
 
 感兴趣的童鞋也可以学一下make，make是一个build管理工具；M$ VS的解决方案、工程项目等的东西，可以看作是make的图形化。
 
-# 关于VS #
+## 关于VS ##
 
 代码库中包含了Visual Studio的工程文件，Windows下双击`pppuc03.sln`即可打开；我使用的VS版本为2010。
 
 注：编译OpenMP需要`vcomp.lib`静态库（[点我下载](http://pan.baidu.com/s/1590Ai)），运行需要`vcomp90.dll`动态库（[点我下载](http://pan.baidu.com/s/1eQJExmq)）。
 
-![四阶幻方OMP](http://7xk0df.com1.z0.glb.clouddn.com/msquare.png)
-
-# 其他 #
+## 其他 ##
 
 ~~[Go版](https://github.com/qzan9/PPPuC03-Go)~~，[Scala版](https://github.com/qzan9/PPPuC03-Scala)。
 
